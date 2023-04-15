@@ -4,6 +4,8 @@ import Benefits from "./Benefits";
 import BenefitCard from "./BenefitCard";
 import OurClasses from "./OurClasses";
 import ClassCard from "./ClassCard";
+import ContactUs from "./ContactUs";
+import Footer from "./Footer";
 
 export {
     Navbar,
@@ -12,4 +14,6 @@ export {
     BenefitCard,
     OurClasses,
     ClassCard,
+    ContactUs,
+    Footer,
 }
