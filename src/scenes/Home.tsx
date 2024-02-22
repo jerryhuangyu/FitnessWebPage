@@ -1,13 +1,13 @@
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { motion } from 'framer-motion';
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { motion } from "framer-motion";
 
-import { SelectedPage } from '@/shared/types';
-import ActionButton from '@/shared/ActionButton';
-import HomePageText from '@/assets/HomePageText.png';
-import HomePageGraphic from '@/assets/HomePageGraphic.png';
-import SponsorRedBull from '@/assets/SponsorRedBull.png';
-import SponsorForbes from '@/assets/SponsorForbes.png';
-import SponsorFortune from '@/assets/SponsorFortune.png';
+import { SelectedPage } from "@/shared/types";
+import ActionButton from "@/shared/ActionButton";
+import HomePageText from "@/assets/HomePageText.png";
+import HomePageGraphic from "@/assets/HomePageGraphic.png";
+import SponsorRedBull from "@/assets/SponsorRedBull.png";
+import SponsorForbes from "@/assets/SponsorForbes.png";
+import SponsorFortune from "@/assets/SponsorFortune.png";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -15,33 +15,36 @@ type Props = {
 
 const Home = ({ setSelectedPage }: Props) => {
   return (
-    <section id='home' className='gap-16 bg-gray-20 pb-10 md:h-full md:pb-0 md:-mt-14'>
+    <section
+      id="home"
+      className="gap-16 bg-gray-20 pb-10 md:-mt-14 md:h-full md:pb-0"
+    >
       {/* image and main header */}
       <motion.div
-        className='md:flex-row flex-col flex mx-auto w-5/6 items-center justify-center md:h-5/6'
+        className="mx-auto flex w-5/6 flex-col items-center justify-center md:h-5/6 md:flex-row"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* main header */}
-        <div className='z-10 mt-[65px] md:basis-3/5'>
+        <div className="z-10 mt-[65px] md:basis-3/5">
           {/* headings */}
           <motion.div
-            className='md:-mt-20'
-            initial='hidden'
+            className="md:-mt-20"
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
             variants={{
-              hidden: { opacity: 0, x:-50 },
-              visible: { opacity: 1, x: 0},
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
             }}
           >
-            <div className='relative'>
-              <div className='before:absolute before:-left-16 before:-top-20 before:z-[-1] md:before:content-evolvetext'>
+            <div className="relative">
+              <div className="md:before:content-noxgymtext before:absolute before:-left-16 before:-top-20 before:z-[-1]">
                 <img src={HomePageText} alt="home-page-text" />
               </div>
             </div>
 
-            <p className='mt-8 text-sm'>
+            <p className="mt-8 text-sm">
               Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
               Studios to get the Body Shapes That you Dream of.. Get Your Dream
               Body Now.
@@ -50,21 +53,21 @@ const Home = ({ setSelectedPage }: Props) => {
 
           {/* actions */}
           <motion.div
-            className='mt-8 flex items-center gap-8'
-            initial='hidden'
+            className="mt-8 flex items-center gap-8"
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.2, duration: 0.5 }}
             variants={{
-              hidden: { opacity: 0, x:-50 },
-              visible: { opacity: 1, x: 0},
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
             }}
           >
             <ActionButton setSelectedPage={setSelectedPage}>
               Join Now
             </ActionButton>
             <AnchorLink
-              className='text-sm font-bold text-primary-500 underline hover:text-secondary-500'
+              className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
               onClick={() => setSelectedPage(SelectedPage.ContactUs)}
               href={`#${SelectedPage.ContactUs}`}
             >
@@ -74,15 +77,15 @@ const Home = ({ setSelectedPage }: Props) => {
         </div>
 
         {/* image */}
-        <div className='flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end'>
+        <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
           <img src={HomePageGraphic} alt="home-page-graphic" />
         </div>
       </motion.div>
 
       {/* sponsors */}
-      <div className='hidden items-center md:flex h-[150px] w-full bg-primary-100'>
-        <div className='mx-auto w-5/6'>
-          <div className='flex w-3/5 items-center justify-between'>
+      <div className="hidden h-[150px] w-full items-center bg-primary-100 md:flex">
+        <div className="mx-auto w-5/6">
+          <div className="flex w-3/5 items-center justify-between">
             <img src={SponsorRedBull} alt="sponsor-redbull" />
             <img src={SponsorForbes} alt="sponsor-forbes" />
             <img src={SponsorFortune} alt="sponsor-fortune" />
@@ -90,7 +93,7 @@ const Home = ({ setSelectedPage }: Props) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
