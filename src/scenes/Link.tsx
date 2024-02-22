@@ -6,10 +6,12 @@ type Props = {
   page: string;
   selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
-}
+};
 
 const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
-  const lowerCasePage = page.toLocaleLowerCase().replace(/ /g, "") as SelectedPage;
+  const lowerCasePage = page
+    .toLocaleLowerCase()
+    .replace(/ /g, "") as SelectedPage;
 
   return (
     <AnchorLink
@@ -22,7 +24,7 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
     >
       {page}
     </AnchorLink>
-  )
-}
+  );
+};
 
-export default Link
+export default Link;

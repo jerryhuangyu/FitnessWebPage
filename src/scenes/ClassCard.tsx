@@ -2,7 +2,7 @@ type Props = {
   name: string;
   description?: string;
   image: string;
-}
+};
 
 const ClassCard = ({ name, description, image }: Props) => {
   const overlayStyles = `p-5 absolute z-30 flex h-[380px] w-[450px] 
@@ -18,7 +18,7 @@ const ClassCard = ({ name, description, image }: Props) => {
       </div>
       <img src={image} alt={`${image}`} />
     </li>
-  )
-}
+  );
+};
 
-export default ClassCard
+export default ClassCard;

@@ -39,7 +39,7 @@ const Home = ({ setSelectedPage }: Props) => {
             }}
           >
             <div className="relative">
-              <div className="md:before:content-noxgymtext before:absolute before:-left-16 before:-top-20 before:z-[-1]">
+              <div className="before:absolute before:-left-16 before:-top-20 before:z-[-1] md:before:content-noxgymtext">
                 <img src={HomePageText} alt="home-page-text" />
               </div>
             </div>

@@ -145,7 +145,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <div className="md:before:content-noxgymtext w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1]">
+            <div className="w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1] md:before:content-noxgymtext">
               <img
                 src={ContactUsPageGraphic}
                 alt="contact-us-page-graphic"

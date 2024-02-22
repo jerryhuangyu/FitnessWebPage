@@ -8,12 +8,12 @@ import ContactUs from "./ContactUs";
 import Footer from "./Footer";
 
 export {
-    Navbar,
-    Home,
-    Benefits,
-    BenefitCard,
-    OurClasses,
-    ClassCard,
-    ContactUs,
-    Footer,
-}
+  Navbar,
+  Home,
+  Benefits,
+  BenefitCard,
+  OurClasses,
+  ClassCard,
+  ContactUs,
+  Footer,
+};

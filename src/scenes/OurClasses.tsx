@@ -9,7 +9,7 @@ import { classes } from "@/constants";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
-}
+};
 
 const OurClasses = ({ setSelectedPage }: Props) => {
   return (
@@ -19,13 +19,13 @@ const OurClasses = ({ setSelectedPage }: Props) => {
       >
         <motion.div
           className="mx-auto w-5/6"
-          initial='hidden'
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0},
+            visible: { opacity: 1, x: 0 },
           }}
         >
           <div className="md:w-3/5">
@@ -53,7 +53,7 @@ const OurClasses = ({ setSelectedPage }: Props) => {
         </div>
       </motion.div>
     </section>
-  )
-}
+  );
+};
 
-export default OurClasses
+export default OurClasses;

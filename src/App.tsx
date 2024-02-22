@@ -1,11 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import { Navbar, Home, Benefits, OurClasses, ContactUs, Footer } from '@/scenes';
-import { SelectedPage } from '@/shared/types';
+import {
+  Navbar,
+  Home,
+  Benefits,
+  OurClasses,
+  ContactUs,
+  Footer,
+} from "@/scenes";
+import { SelectedPage } from "@/shared/types";
 
 function App() {
-  const [ selectedPage, setSelectedPage ] = useState<SelectedPage>(SelectedPage.Home);
-  const [ isTopOfPage, setIsTopOfPage ] = useState<boolean>(true);
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(
+    SelectedPage.Home
+  );
+  const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,7 +23,7 @@ function App() {
         setSelectedPage(SelectedPage.Home);
       } else {
         setIsTopOfPage(false);
-      };
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -34,7 +43,7 @@ function App() {
       <ContactUs setSelectedPage={setSelectedPage} />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

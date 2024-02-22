@@ -6,7 +6,7 @@ import { SelectedPage } from "@/shared/types";
 type Props = {
   children: React.ReactNode;
   setSelectedPage: (value: SelectedPage) => void;
-}
+};
 
 const ActionButton = ({ children, setSelectedPage }: Props) => {
   return (
@@ -17,7 +17,7 @@ const ActionButton = ({ children, setSelectedPage }: Props) => {
     >
       {children}
     </AnchorLink>
-  )
-}
+  );
+};
 
-export default ActionButton
+export default ActionButton;
